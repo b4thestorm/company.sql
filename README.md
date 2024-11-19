@@ -78,7 +78,33 @@ INSERT INTO DEPARTMENT (dname, dnumber, mgrssn, mgrstartdate) VALUES ("Operation
 INSERT INTO DEPARTMENT (dname, dnumber, mgrssn, mgrstartdate) VALUES ("Customer Service", 15, 666666600, '2020-05-22');
 ```
 
--- SKIP 21-26 
+
+-- Q21
+```sql
+DELETE FROM DEPARTMENT WHERE dname="Operations";
+```
+
+-- Q22
+```sql
+CREATE VIEW MANAGER_VIEW AS SELECT dname, fname, lname, salary FROM EMPLOYEE, DEPARTMENT WHERE EMPLOYEE.ssn = DEPARTMENT.mgrssn;
+SELECT * FROM MANAGER_VIEW;
+```
+
+-- Q23
+```sql
+SELECT fname, lname FROM EMPLOYEE WHERE salary > salary + 10000 IN (SELECT MIN(salary) FROM EMPLOYEE);
+```
+
+-- Q24
+```sql
+-- REDO 24
+```
+
+-- Q25
+```sql
+SELECT fname, lname FROM EMPLOYEE WHERE dno IN (SELECT MAX(salary), dno FROM EMPLOYEE GROUP BY salary, dno ORDER BY salary LIMIT 1);
+```
+
 
 ```sql
 SELECT * FROM EMPLOYEE WHERE fname LIKE 'a%';
