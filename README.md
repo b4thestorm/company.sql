@@ -4,7 +4,7 @@ use company;
 
 -- #QUESTION 1
 ```sql
-INSERT INTO EMPLOYEE(fname, minit, lname, ssn, bdate, address, sex, salary) VALUES ('arnold', 's', 'sanders', 999999999, '1988-11-16', '2605 Grand Concourse apt 1106', 'M', '140000');
+INSERT INTO EMPLOYEE(fname, minit, lname, ssn, bdate, address, sex, salary) VALUES ('arnold', 's', 'sanders', 999999999, '1988-11-16', '26 Grand Concourse', 'M', '140000');
 ```
 
 -- #QUESTION 2
